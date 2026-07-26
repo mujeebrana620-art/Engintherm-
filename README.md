@@ -1,6 +1,6 @@
 # EngiSolve — AI Study & Problem-Solving Assistant for Mechanical Engineering Students
 
-**Live Application:** [EngiSolve Applet](https://engintherm.vercel.app/)  
+**Live Application:**(https://engintherm.vercel.app/)  
 **Author:** 3rd semester Mechanical Engineering Student  
 **Deadline:** Mon 27 July 2026, 11:59 PM PKT
 
