@@ -1,6 +1,6 @@
 # EngiSolve — AI Study & Problem-Solving Assistant for Mechanical Engineering Students
 
-**Live Application:** [EngiSolve Applet](https://ais-dev-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)  
+**Live Application:** [EngiSolve Applet](https://engintherm.vercel.app/)  
 **Author:** 3rd semester Mechanical Engineering Student  
 **Deadline:** Mon 27 July 2026, 11:59 PM PKT
 
@@ -16,14 +16,12 @@ Mechanical engineering students juggle 5–6 dense subjects at once (Thermodynam
 
 ## b. Deployed Live URL
 
-- **Live URL:** [EngiSolve Application](https://ais-dev-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)
-- **Shared URL:** [EngiSolve Public Shared Link](https://ais-pre-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)
-
+- **Live URL:** [EngiSolve Application](https://engintherm.vercel.app/)
 ---
 
 ## c. Full Features List
 
-- **Subject Picker:** Quick navigation across core courses: Thermodynamics, Fluid Mechanics, Heat Transfer, Machine Design, Manufacturing Processes, and Engineering Math.
+- **Subject Picker:** Quick navigation across core courses: Thermodynamics, Fluid Mechanics, Heat Transfer, Machine Design, Manufacturing Proc)esses, and Engineering Math.
 - **Problem Input & Sample Practice Launcher:** Flexible input area supporting custom pasted numerical problems and 18 pre-loaded practice problems (3 per subject) with difficulty indicators.
 - **AI Structured Solver:** Server-side API integration enforcing standardized professor-grade solution formatting with low-temperature deterministic reasoning.
 - **Solution History Panel:** Automatically saves solved problems into local browser storage with subject tags, timestamp, star favorites, keyword search, and one-click reopening.
