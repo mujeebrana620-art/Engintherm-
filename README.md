@@ -94,15 +94,22 @@ Rules:
 
 ## f. Application Screenshots & Interface Highlights
 
-### 1. Main EngiSolve Workspace & Structured AI Worked Solution
-![EngiSolve Main Workspace Screenshot](./src/assets/images/app_screenshot_main_1785084214053.jpg)
-- **Subject Picker & Practice Launcher:** Select any of the 6 core mechanical engineering subjects to load subject-specific sample problems.
-- **Professor-Grade 6-Part Solution Layout:** Features Given Data, Assumptions, Governing Equations, Step-by-Step Calculation with attached units, Units Check, and bolded Final Answer.
+### 1. Course Subject Selection & Practice Problems Launcher
+![EngiSolve Subject Selector](./src/assets/images/screenshot_1_subjects_1785084589093.jpg)
+- **Course Subject Selection:** Choose from 6 core mechanical engineering disciplines (Thermodynamics, Fluid Mechanics, Heat Transfer, Machine Design, Manufacturing Processes, Engineering Math).
+- **Practice Problems Launcher:** Quick-start preset problems tailored to each subject.
 
-### 2. Interactive Formula Sheet & Unit Converter Sidebar
-![EngiSolve Formula Sheet Screenshot](./src/assets/images/app_screenshot_formula_1785084235092.jpg)
-- **Interactive Formula Sheet:** Comprehensive equations across Thermodynamics, Fluid Mechanics, Heat Transfer, Machine Design, Manufacturing, and Engineering Math.
-- **Integrated Unit Converter:** Live conversion between SI and Imperial units for pressure, energy, viscosity, temperature, and mass flow rate.
+### 2. Structured AI Worked Solution (6-Part Standard Output)
+![EngiSolve Solution Output](./src/assets/images/screenshot_2_solution_1785084605534.jpg)
+- **Professor-Grade 6-Part Layout:** Formatted strictly with **Given / Known Data**, **Assumptions**, **Governing Equation(s)**, **Solution Steps**, **Units Check**, and bolded **Final Answer**.
+
+### 3. Interactive Formula Sheet & Equation Inspector
+![EngiSolve Formula Sheet](./src/assets/images/screenshot_3_formulas_1785084622487.jpg)
+- **Searchable Formula Sheet:** Live searchable catalog of engineering equations, complete with parameter descriptions and interactive calculation evaluators.
+
+### 4. Real-time Unit Converter Tool
+![EngiSolve Unit Converter](./src/assets/images/screenshot_4_converter_1785084641331.jpg)
+- **Multi-Quantity Unit Converter:** Seamlessly converts units for pressure, stress, energy, viscosity, temperature, and mass flow rate with one-click injection into problem inputs.
 
 
 ---
