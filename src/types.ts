@@ -40,10 +40,17 @@ export interface FormulaItem {
   id: string;
   subject: EngineeringSubject;
   title: string;
+  category?: string;
   latex: string;
   plainText: string;
-  variables: { symbol: string; name: string; unit: string }[];
+  variables: { symbol: string; name: string; unit: string; defaultValue?: number }[];
   description: string;
+  evaluators?: {
+    targetSymbol: string;
+    label: string;
+    formulaExpr: string;
+    calculate: (inputs: Record<string, number>) => number;
+  }[];
 }
 
 export interface UnitCategory {
