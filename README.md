@@ -1,6 +1,7 @@
 # EngiSolve — AI Study & Problem-Solving Assistant for Mechanical Engineering Students
 
-**Live Application:** [EngiSolve Applet](https://ais-dev-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)  
+**Live Application:**
+(https://engintherm.vercel.app/)
 
 ---
 
@@ -14,7 +15,7 @@ Mechanical engineering students juggle 5–6 dense subjects at once (Thermodynam
 
 ## b. Deployed Live URL
 
-- **Live URL:** [EngiSolve Application](https://ais-dev-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)
+- **Live URL:** [EngiSolve Application](https://engintherm.vercel.app/)
 
 ---
 
