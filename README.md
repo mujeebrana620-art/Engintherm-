@@ -1,8 +1,6 @@
 # EngiSolve — AI Study & Problem-Solving Assistant for Mechanical Engineering Students
 
 **Live Application:** [EngiSolve Applet](https://ais-dev-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)  
-**Author:** 3rd semester Mechanical Engineering Student  
-**Deadline:** Mon 27 July 2026, 11:59 PM PKT
 
 ---
 
@@ -17,7 +15,6 @@ Mechanical engineering students juggle 5–6 dense subjects at once (Thermodynam
 ## b. Deployed Live URL
 
 - **Live URL:** [EngiSolve Application](https://ais-dev-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)
-- **Shared URL:** [EngiSolve Public Shared Link](https://ais-pre-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)
 
 ---
 
