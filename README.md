@@ -1,52 +1,50 @@
-# EnginTherm — AI Problem-Solving Assistant for Mechanical Engineering Students
+# EngiSolve — AI Study & Problem-Solving Assistant for Mechanical Engineering Students
 
-**Live App:** [https://engintherm.vercel.app/](https://engintherm.vercel.app/)
-
----
-
-## a. What It Does & The Problem It Solves
-
-Mechanical engineering students take 5–6 dense subjects at once — Thermodynamics, Fluid Mechanics, Heat Transfer, Machine Design, Manufacturing Processes, and Engineering Math — and constantly get stuck on numerical problems with no TA or professor available at the moment they need help (e.g. late-night assignment work, exam prep).
-
-Generic AI chatbots answer engineering problems inconsistently — sometimes skipping assumptions, sometimes not checking units, sometimes just dumping a final number with no method shown. That's not how engineering problems are supposed to be solved, and it's not how they're graded.
-
-**EnginTherm** is a focused study tool for mechanical engineering students that takes any problem statement and returns a solution in the exact structure a professor expects: **Given → Assumptions → Governing Equation → Solution Steps → Units Check → Final Answer.** It's built for self-study and assignment cross-checking, not as a general-purpose chatbot.
-
-**Built for:** mechanical (and general) engineering undergraduates studying core courses, especially during exam prep or assignment crunch.
+**Live Application:** [EngiSolve Applet](https://ais-dev-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)  
+**Author:** 3rd semester Mechanical Engineering Student  
+**Deadline:** Mon 27 July 2026, 11:59 PM PKT
 
 ---
 
-## b. Live Deployed URL
+## a. Pitch & Overview
 
-🔗 **[https://engintherm.vercel.app/](https://engintherm.vercel.app/)**
+Mechanical engineering students juggle 5–6 dense subjects at once (Thermodynamics, Fluid Mechanics, Heat Transfer, Machine Design, Manufacturing Processes, and Engineering Math) with no single place to get step-by-step worked solutions when stuck on numerical problems at 1 AM. Generic AI chatbots output unstructured, unverified, and inconsistent engineering answers without unit checks or standardized methods. 
 
-Open it in a private/incognito tab to confirm it works without any login.
-
----
-
-## c. Features
-
-*(Edit this list to match exactly what your app can do — remove anything below that isn't actually built, add anything that is.)*
-
-- **Subject picker** — choose from Thermodynamics, Fluid Mechanics, Heat Transfer, Machine Design, Manufacturing Processes, or Engineering Math
-- **AI Structured Solver** — paste any problem and get a step-by-step, professor-style solution (see Section d)
-- **Solution history** — solved problems are saved locally with subject tag and timestamp, and can be reopened
-- **Quick reference sidebar** — key formulas and unit conversions per subject, available instantly with no AI call needed
-- **Copy/export solution** — copy the AI's formatted answer to paste directly into assignment notes
-- **Loading and error states** — clear feedback while the AI is generating a solution, and a graceful message if the request fails
+**EngiSolve** solves this by enforcing the exact 6-part problem-solving methodology expected by engineering professors: **Given → Assumptions → Governing Equation(s) → Solution Steps → Units Check → Final Answer**. It provides a single-destination study hub complete with a subject-tagged solution history and an interactive formula & unit converter reference panel.
 
 ---
 
-## d. The AI Feature
+## b. Deployed Live URL
 
-**What it does:** Takes the student's problem statement plus the selected subject, and returns a solution that always follows a fixed, rigorous structure — so the output is directly usable for learning or for checking your own work, not just a wall of unstructured text.
+- **Live URL:** [EngiSolve Application](https://ais-dev-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)
+- **Shared URL:** [EngiSolve Public Shared Link](https://ais-pre-ymyixqfcdhtj7c2jtpmhbf-271435965849.asia-east1.run.app)
 
-**Model used:** Google **Gemini API**, called from a server-side Express route (`server.ts` / `/api`) so the key is never exposed to the browser. *(Confirm and paste your exact model string here, e.g. `gemini-2.5-flash` — check the actual value in your `server.ts` or `/api` code before submitting.)*
+---
 
-**Exact system prompt used:**
+## c. Full Features List
 
-```
-`You are EngiSolve, an expert mechanical engineering tutor. A student will give you a problem statement and the subject it belongs to (Thermodynamics, Fluid Mechanics, Heat Transfer, Machine Design, Manufacturing Processes, or Engineering Math).
+- **Subject Picker:** Quick navigation across core courses: Thermodynamics, Fluid Mechanics, Heat Transfer, Machine Design, Manufacturing Processes, and Engineering Math.
+- **Problem Input & Sample Practice Launcher:** Flexible input area supporting custom pasted numerical problems and 18 pre-loaded practice problems (3 per subject) with difficulty indicators.
+- **AI Structured Solver:** Server-side API integration enforcing standardized professor-grade solution formatting with low-temperature deterministic reasoning.
+- **Solution History Panel:** Automatically saves solved problems into local browser storage with subject tags, timestamp, star favorites, keyword search, and one-click reopening.
+- **Quick Formula Reference & Unit Converter:**
+  - **Formula Sheet:** Interactive key equations per subject with variable definitions and standard SI/Imperial units.
+  - **Unit Converter:** Live converter for Pressure, Power, Energy, Temperature, Dynamic Viscosity, Mass Flow, Density, and Torque.
+- **Export & Copy Utility:** One-click formatted clipboard copy and Markdown file download.
+- **System Prompt Inspector:** In-app transparency modal allowing students and judges to inspect the exact PRD system prompt and backend architecture.
+
+---
+
+## d. The AI Feature & System Prompt
+
+EngiSolve uses a server-side Express proxy calling the Gemini API (`@google/genai` SDK) to ensure API keys are never exposed to the client. The AI tutor is governed by a strict system prompt that enforces academic structure and unit checks.
+
+### System Prompt (Exact PRD Specification):
+
+```text
+You are EngiSolve, an expert mechanical engineering tutor. A student will give you
+a problem statement and the subject it belongs to (Thermodynamics, Fluid Mechanics,
+Heat Transfer, Machine Design, Manufacturing Processes, or Engineering Math).
 
 Always answer using EXACTLY this structure, with these headings, in this order:
 
@@ -54,92 +52,88 @@ Always answer using EXACTLY this structure, with these headings, in this order:
 - List every value provided in the problem with units.
 
 **Assumptions**
-- State any standard engineering assumptions needed to solve it (e.g., ideal gas, steady state, negligible friction) — only if relevant. If none are needed, say "No additional assumptions required."
+- State any standard engineering assumptions needed to solve it (e.g., ideal gas,
+  steady state, negligible friction) — only if relevant. If none are needed, say
+  "No additional assumptions required."
 
 **Governing Equation(s)**
 - Name and write the relevant equation(s) in standard engineering notation.
 
 **Solution Steps**
-- Solve step by step, showing substitution of values and intermediate results. Keep units attached at every step.
+- Solve step by step, showing substitution of values and intermediate results.
+  Keep units attached at every step.
 
 **Units Check**
 - Briefly confirm the final answer's units are dimensionally correct.
 
 **Final Answer**
-- State the final numeric result clearly, bolded, with correct units and appropriate significant figures.
+- State the final numeric result clearly, bolded, with correct units and
+  appropriate significant figures.
 
 Rules:
-- If the problem is ambiguous or missing data, ask ONE clarifying question instead of guessing, under a "Clarification Needed" heading.
-- If it's a conceptual (non-numeric) question, skip Units Check and answer with Given/Context, Explanation, and Key Takeaway instead.
+- If the problem is ambiguous or missing data, ask ONE clarifying question instead
+  of guessing, under a "Clarification Needed" heading.
+- If it's a conceptual (non-numeric) question, skip Units Check and answer with
+  Given/Context, Explanation, and Key Takeaway instead.
 - Be concise but complete — no filler, no repeating the question back verbatim.
-- Never fabricate formulas; if unsure, say so explicitly rather than guessing.`;
-,,,
-Subject: {selected subject}
-Problem: {student's typed problem}
+- Never fabricate formulas; if unsure, say so explicitly rather than guessing.
 ```
 
 ---
 
-## e. Tools, Services, and AI Models Used
+## e. Tools & Tech Stack Used
 
-| Category | Tool/Service |
-|---|---|
-| App builder | Google AI Studio (Build mode) |
-| Frontend framework | React + TypeScript + Vite |
-| Backend | Node.js + Express (`server.ts`) |
-| Hosting/deployment | Vercel |
-| AI model | Google Gemini API |
-| Version control | GitHub |
-| Planning | Claude (Anthropic) — used to write the product spec/PRD and this README |
+- **Frontend Framework:** React 19, TypeScript, Vite
+- **Styling:** Tailwind CSS v4, Lucide Icons, Motion
+- **Backend Architecture:** Node.js, Express, ESBuild, TSX
+- **AI SDK & Model:** `@google/genai` with `gemini-3.6-flash` (Server-side proxy route `/api/solve`)
+- **Formatting & Rendering:** `react-markdown` and `katex`
+- **Persistence:** LocalStorage
 
 ---
 
-## f. Screenshots
+## f. Application Screenshots & Interface Highlights
 
-> Add at least 3 screenshots below before submitting.
+### 1. Main EngiSolve Workspace & Structured AI Worked Solution
+![EngiSolve Main Workspace Screenshot](./src/assets/images/app_screenshot_main_1785084214053.jpg)
+- **Subject Picker & Practice Launcher:** Select any of the 6 core mechanical engineering subjects to load subject-specific sample problems.
+- **Professor-Grade 6-Part Solution Layout:** Features Given Data, Assumptions, Governing Equations, Step-by-Step Calculation with attached units, Units Check, and bolded Final Answer.
 
-1. **Home screen** — subject picker + empty problem input + reference sidebar visible
-   `![Home screen](./screenshots/home.png)`
+### 2. Interactive Formula Sheet & Unit Converter Sidebar
+![EngiSolve Formula Sheet Screenshot](./src/assets/images/app_screenshot_formula_1785084235092.jpg)
+- **Interactive Formula Sheet:** Comprehensive equations across Thermodynamics, Fluid Mechanics, Heat Transfer, Machine Design, Manufacturing, and Engineering Math.
+- **Integrated Unit Converter:** Live conversion between SI and Imperial units for pressure, energy, viscosity, temperature, and mass flow rate.
 
-2. **Solved problem** — a submitted problem showing the full structured AI output (Given → Assumptions → Equation → Steps → Units Check → Final Answer)
-   `![Solved example](./screenshots/solved-example.png)`
-
-3. **History panel** — showing at least one saved past solution
-   `![History panel](./screenshots/history.png)`
-
-*(Create a `/screenshots` folder in your repo, drop your PNGs in, and the paths above will render automatically on GitHub.)*
 
 ---
 
-## g. How to Run This Project Locally
+## g. How to Run Locally
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/mujeebrana620-art/Engintherm-.git
-cd Engintherm-
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd engisolve
+   ```
 
-# 2. Install dependencies
-npm install
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-# 3. Set up environment variables
-# Create a .env.local file in the root with:
-GEMINI_API_KEY=your_gemini_api_key_here
+3. **Configure Environment Variables:**
+   Create a `.env` file in the project root:
+   ```env
+   GEMINI_API_KEY="your-gemini-api-key"
+   ```
 
-# 4. Run the development server
-npm run dev
+4. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:3000` in your browser.
 
-# 5. Open the app in your browser
-# (check your terminal output for the exact local port, e.g. http://localhost:3000)
-
-# For a production build:
-npm run build
-npm start
-```
-
-**Note:** The Gemini API key is read server-side only (inside `server.ts` / the `/api` route) and is never exposed in frontend code or committed to this repository. On Vercel, it's stored as an encrypted Environment Variable under Project Settings.
-
----
-
-## License / Academic Note
-
-This project was built individually as a final project submission. The idea, system prompt design, and problem-solving structure are original work.
+5. **Production Build:**
+   ```bash
+   npm run build
+   npm start
+   ```
