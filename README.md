@@ -144,3 +144,39 @@ Rules:
    npm run build
    npm start
    ```
+
+---
+
+## h. Deploying to Vercel
+
+EngiSolve is pre-configured for seamless 1-click or CLI deployment on **Vercel**.
+
+### Vercel Project Configuration
+- **Framework Preset:** Vite
+- **Build Command:** `npm run build`
+- **Output Directory:** `dist`
+- **Serverless API Route:** `/api/solve.ts` (Vercel automatically provisions Node.js serverless functions in the `/api` directory)
+
+### Steps to Deploy on Vercel:
+
+1. **Push your code to GitHub / GitLab / Bitbucket**:
+   ```bash
+   git add .
+   git commit -m "Deploy EngiSolve to Vercel"
+   git push origin main
+   ```
+
+2. **Import Project into Vercel Dashboard**:
+   - Go to [Vercel Dashboard](https://vercel.com/new).
+   - Select your `engisolve` repository.
+   - Vercel will automatically detect `vite` and load configuration from `vercel.json`.
+
+3. **Configure Environment Variables**:
+   In the Vercel **Environment Variables** panel during setup (or under *Project Settings -> Environment Variables*), add:
+   - **Key:** `GEMINI_API_KEY`
+   - **Value:** `your_gemini_api_key_here`
+
+4. **Deploy**:
+   - Click **Deploy**.
+   - Vercel will build the Vite frontend into `dist/` and expose `/api/solve` as a secure backend serverless endpoint.
+
